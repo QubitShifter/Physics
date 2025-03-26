@@ -12,7 +12,7 @@ namespace HW_5
             Branch = branch;
         }
 
-        public override void DisplayInfo()
+        public void DisplayInfo()
         {
             Console.WriteLine($"                                                                              ");
             Console.WriteLine($"{Name} is a branch of {FieldOfStudy}.");
@@ -43,7 +43,7 @@ namespace HW_5
             }
         }
 
-        public void DoBiologyProblems()
+        public static void DoBiologyProblems()
         {
             Console.WriteLine($"                                                                                                              ");
             Console.WriteLine("In Biology we are dealing with living organisms.");

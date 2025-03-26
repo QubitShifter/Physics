@@ -44,16 +44,7 @@ namespace HW_5
             return normalizedDifficulty; 
         }
 
-
-
-
-        public virtual void DisplayInfo()
-        {
-            Console.WriteLine($"Subject: {Name}");
-            Console.WriteLine($"Field of Study: {FieldOfStudy}");
-            Console.WriteLine($"Academic Degree: {AcademicDegree}");
-            Console.WriteLine($"Semesters: {Semesters}");
-        }
+ 
     }
 }
 

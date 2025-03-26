@@ -33,19 +33,15 @@ namespace HW_5
             {
                 case "physics":
                     physics.DisplayInfo();
-                    Physics.DoPhysicsProblems(); 
                     break;
                 case "math":
                     mathematics.DisplayInfo();
-                    Mathematics.DoMathProblems(); 
                     break;
                 case "biology":
                     bio.DisplayInfo();
-                    bio.DoBiologyProblems(); 
                     break;
                 case "chemistry":
                     chemistry.DisplayInfo();
-                    chemistry.DoChemistryProblems(); 
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please choose a valid subject.");

@@ -12,7 +12,7 @@ namespace HW_5
             Branch = branch;
         }
 
-        public override void DisplayInfo()
+        public  void DisplayInfo()
         {
             Console.WriteLine($"                                                                              ");
             Console.WriteLine($"{Name} is a branch of {FieldOfStudy} that studies matter and its interactions.");
@@ -42,7 +42,7 @@ namespace HW_5
             }
         }
 
-        public void DoChemistryProblems()
+        public static void DoChemistryProblems()
         {
             Console.WriteLine($"                                                                                                              ");
             Console.WriteLine("Electrons change their energy levels. Molecules change their bonds. Elements combine and change into compounds.");

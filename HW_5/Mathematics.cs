@@ -13,13 +13,13 @@ namespace HW_5
             Branch = branch;
         }
 
-        public override void DisplayInfo()
+        public  void DisplayInfo()
         {
             Console.WriteLine($"                                                                       ");
             Console.WriteLine($"{Name} is part of the {Branch} branch in {FieldOfStudy}.");
             Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semesters} semesters.");
 
-            Console.WriteLine($"You can get Masters degree and takes {Semesters} + 2 semesters to complete.");
+            Console.WriteLine($"You can get Masters degree and it takes {Semesters} + 2 semesters to complete.");
             Console.WriteLine($"Or even You can get a PhD if you suffer even more.");
 
             int numOfEquations = 10;
