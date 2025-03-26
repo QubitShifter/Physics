@@ -3,43 +3,57 @@
   <Class Name="HW_5.ScienceLab">
     <Position X="1" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAACBAAAABA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAQAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ScienceLab.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HW_5.Science">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAgAAAAAAAQAAAAAABAAIAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAQgAAAAAAAQAAAAAABAAIAAABAAA=</HashCode>
       <FileName>Science.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HW_5.Biology">
     <Position X="2" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAEAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
       <FileName>Biology.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HW_5.Chemistry">
     <Position X="4.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAgAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAQAAAAgAAA=</HashCode>
       <FileName>Chemistry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HW_5.Mathematics">
     <Position X="7" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAgABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAABAAAAAAgAAA=</HashCode>
       <FileName>Mathematics.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HW_5.Physics">
     <Position X="9.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAQAAAAMAAAAAAAAAAAAAAAAAgAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAACAQAAAAMAAAIAAAAAAAAAAAAAAAAAABAAAgAAA=</HashCode>
       <FileName>Physics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HW_5.Research" Collapsed="true">
+    <Position X="11.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Research.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HW_5.Program" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

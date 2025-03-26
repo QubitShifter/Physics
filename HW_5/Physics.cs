@@ -62,7 +62,7 @@ namespace HW_5
             }
         }
 
-        public static void DoPhysicsProblems()
+        public  void DoPhysicsProblems()
         {
             Console.WriteLine("\nSpeed of Light is denoted as constant 'C':");
 

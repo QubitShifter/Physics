@@ -45,7 +45,7 @@ namespace HW_5
             }
         }
 
-        public static void DoBiologyProblems()
+        public void DoBiologyProblems()
         {
             Console.WriteLine("\nIn Biology we are dealing with living organisms.");
             Console.WriteLine("We try to understand our DNA, the human genome.");

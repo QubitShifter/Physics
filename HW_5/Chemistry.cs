@@ -45,7 +45,7 @@ namespace HW_5
             }
         }
 
-        public static void DoChemistryProblems()
+        public void DoChemistryProblems()
         {
 
             Console.WriteLine("\nElectrons change their energy levels. Molecules change their bonds. Elements combine and change into compounds.");

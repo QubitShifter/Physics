@@ -3,7 +3,7 @@
     public class Science
     {
         public string MainScienceBranch { get; set;  }
-        protected string ScienceSubBranch { get; set; }
+        protected string ScienceSubBranch;
 
         private string Research = "Field research Data";
         
@@ -15,7 +15,8 @@
             ScienceSubBranch = scienceSubBranch;
         }
 
-        protected float LevelOfDificulty(int numOfEquations, int coffeeCupsConsumed, int panicLevel, int confidence)
+ 
+        protected  float LevelOfDificulty(int numOfEquations, int coffeeCupsConsumed, int panicLevel, int confidence)
         {
             if (numOfEquations == 0) 
             {
@@ -40,16 +41,16 @@
             return normalizedDifficulty; 
         }
 
-        private void ResearchMethod()
+
+        private void ResearchMethodAccessDenied()
         {
-            Console.WriteLine( $"{Research} results:" );
+            Console.WriteLine( $"\nAccess to {Research} results is denied:" );
         }
 
-        public void DoSomeResearch()
+        public void ResearchMethodAccess()
         {
-            ResearchMethod();
+            ResearchMethodAccessDenied();
         }
-
     }
 }
 

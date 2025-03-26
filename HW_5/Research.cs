@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace HW_5
 {
-    public class Research
-    {
-        public void DisplayResearch(Science scienceObj)
+    public class Research: Science
+    {   
+        
+       public Research(string mainScienceBranch, string scienceSubBranch)
+        : base(mainScienceBranch, scienceSubBranch){ }
+    
+        public void DisplayResearch()
         {
-            scienceObj.DoSomeResearch();
+            Console.WriteLine( "\nAccessidg research results...." );
+            ResearchMethodAccess();
         }
     }
 }

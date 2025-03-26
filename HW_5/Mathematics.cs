@@ -59,7 +59,7 @@ namespace HW_5
             }
         }
 
-        public static void DoMathProblems()
+        public void DoMathProblems()
         {
             Console.WriteLine($"                                     ");
             Console.WriteLine("Let's calculate a quadratic equation..");
