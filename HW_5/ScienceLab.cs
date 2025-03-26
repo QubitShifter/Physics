@@ -3,31 +3,30 @@ using System.Collections.Generic;
 
 namespace HW_5
 {
-    public class ScienceLab
+    public class ScienceLab: Science
     {
-        public string? Name { get; set; }
-        public string? FieldOfStudy { get; set; }
-        public static List<string>? Subject { get; set; } = new List<string> { "Physics", "Math", "Biology", "Chemistry" };
+        public string NameOfScience { get; set; }
+        public string? SubjectOf { get; set; }
 
-        public ScienceLab()
+        public static List<string>? ScienceFiled { get; set; } = new List<string> { "Physics", "Math", "Biology", "Chemistry" };
+
+
+        public ScienceLab(string mainScienceBranch, string scienceSubBranch, string nameOfScience, string subjectOf)
+            : base(mainScienceBranch, scienceSubBranch)
         {
+            NameOfScience = nameOfScience;
+            SubjectOf = subjectOf;
         }
 
-        public ScienceLab(string name, string fieldOfStudy)
+        public static void AskForSubject()
         {
-            Name = name;
-            FieldOfStudy = fieldOfStudy;
-        }
-
-        public void AskForSubject()
-        {
-            Console.WriteLine("Choose a subject: " + string.Join(", ", Subject!));
+            Console.WriteLine("Choose a subject: " + string.Join(", ", ScienceFiled!));
             string choice = Console.ReadLine()?.Trim().ToLower();
 
-            Physics physics = new("Physics", "Theoretical and Experimental", "Nature sciences studying laws that govern interactions", 4);
-            Mathematics mathematics = new("Trigonometry and Algebra", "Mathematics", "sciences studying numbers, complex numbers, and shapes, ");
-            Biology bio = new("Biology", "Genetics", "Nature sciences studying living organisms");
-            Chemistry chemistry = new("Chemistry", "Organic Chemistry", "Nature sciences");
+            Physics physics = new("Physics", "Natural Science", "Bachelor's", "Physics", 4, "Bachelor's");
+            Mathematics mathematics = new("Mathematics", "Formal Science", "sciences studying numbers, complex numbers, and shapes", "Pure Math", 4, "Bachelor's");
+            Biology bio = new("Biology", "Natural Science", "Nature sciences studying living organisms", "Life Sciences", 4, "Bachelor's");
+            Chemistry chemistry = new("Chemistry", "Natural Science", "Nature sciences", "Physical Sciences", 4, "Bachelor's");
 
             switch (choice)
             {
@@ -47,12 +46,13 @@ namespace HW_5
                     Console.WriteLine("Invalid choice. Please choose a valid subject.");
                     break;
             }
+        
         }
 
         public static void Main()
         {
-            ScienceLab scienceMain = new();
-            scienceMain.AskForSubject();
+            ScienceLab scienceMain = new("Physics", "Theoretical", "Quantum Mechanics", "Advanced Studies");
+            AskForSubject();
         }
     }
 }

@@ -3,23 +3,25 @@ using System.Numerics;
 
 namespace HW_5
 {
-    public class Mathematics : Science
+    public class Mathematics : ScienceLab
     {
-        public string Branch { get; set; }
+        public int Semester { get; set; }
+        public string AcademicDegree { get; set; }
 
-        public Mathematics(string name, string branch, string field)
-            : base(name, field, "Bachelor of Science", 4)
+        public Mathematics(string scienceSubBranch, string mainScienceBranch, string nameOfScience, string subjectOf, int semester, string academicDegree)
+            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf)
         {
-            Branch = branch;
+            Semester = semester;
+            AcademicDegree = academicDegree;
         }
 
-        public  void DisplayInfo()
+        public void DisplayInfo()
         {
             Console.WriteLine($"                                                                       ");
-            Console.WriteLine($"{Name} is part of the {Branch} branch in {FieldOfStudy}.");
-            Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semesters} semesters.");
+            Console.WriteLine($"{NameOfScience} is part of the {ScienceSubBranch} branch in {MainScienceBranch}.");
+            Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semester} semesters.");
 
-            Console.WriteLine($"You can get Masters degree and it takes {Semesters} + 2 semesters to complete.");
+            Console.WriteLine($"You can get Masters degree and it takes {Semester} + 2 semesters to complete.");
             Console.WriteLine($"Or even You can get a PhD if you suffer even more.");
 
             int numOfEquations = 10;

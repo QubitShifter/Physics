@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace HW_5
+﻿namespace HW_5
 {
-    public class Science : ScienceLab
+    public class Science
     {
-        public string AcademicDegree { get; set; }
-        public int Semesters { get; set; }
+        public string MainScienceBranch { get; set;  }
+        protected string ScienceSubBranch { get; set; }
 
-        public Science(string name, string fieldOfStudy, string academicDegree, int semesters)
-            : base(name, fieldOfStudy)  
+        private string Research = "Field research Data";
+        
+
+        public Science(string mainScienceBranch, string scienceSubBranch)
+            
         {
-            AcademicDegree = academicDegree;
-            Semesters = semesters;
+            MainScienceBranch = mainScienceBranch;
+            ScienceSubBranch = scienceSubBranch;
         }
 
         protected float LevelOfDificulty(int numOfEquations, int coffeeCupsConsumed, int panicLevel, int confidence)
@@ -38,13 +33,23 @@ namespace HW_5
             difficultyPercent = Math.Min(difficultyPercent, 100);
 
             Console.WriteLine($"                                                     ");
-            Console.WriteLine($"{Name} difficulty level: {normalizedDifficulty}/10   ");
-            Console.WriteLine($"{Name} difficulty percentage: {difficultyPercent:F2}%");
+            Console.WriteLine($"{MainScienceBranch} difficulty level: {normalizedDifficulty}/10");
+            Console.WriteLine($"{MainScienceBranch} difficulty percentage: {difficultyPercent:F2}%");
+
 
             return normalizedDifficulty; 
         }
 
- 
+        private void ResearchMethod()
+        {
+            Console.WriteLine( $"{Research} results:" );
+        }
+
+        public void DoSomeResearch()
+        {
+            ResearchMethod();
+        }
+
     }
 }
 
