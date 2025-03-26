@@ -17,10 +17,9 @@ namespace HW_5
 
         public void DisplayInfo()
         {
-            Console.WriteLine($"                                                                       ");
-            Console.WriteLine($"{NameOfScience} is part of the {ScienceSubBranch} branch in {MainScienceBranch}.");
+            Console.WriteLine($"\n{ScienceSubBranch} is a branch of {MainScienceBranch}.");
+            Console.WriteLine($"{ScienceSubBranch} has different subjects like Linear Algebra, Differential Geometry, Complex Numbers, Number Theory, adn so on..");
             Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semester} semesters.");
-
             Console.WriteLine($"You can get Masters degree and it takes {Semester} + 2 semesters to complete.");
             Console.WriteLine($"Or even You can get a PhD if you suffer even more.");
 
@@ -31,16 +30,13 @@ namespace HW_5
 
             float difficulty = LevelOfDificulty(numOfEquations, coffeeCups, panicLevel, confidence);
 
-            Console.WriteLine($"                          ");
-            Console.WriteLine($"  ----------------------- ");
-            Console.WriteLine($"   stresfull warning:) ");
-            Console.WriteLine($"   tons of equations -> more coffee (at least {coffeeCups} cups per hour)");
+            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"   stresfull warning............. ");
+            Console.WriteLine($"   tons of equations -> hance gallons of coffee");
             Console.WriteLine($"   panic level raises up {panicLevel}/10");
             Console.WriteLine($"   and of course your confidence drops to {confidence}/10");
-
-            Console.WriteLine($"  ----------------------- ");
-            Console.WriteLine($"                          ");
-            Console.WriteLine("Would you like to see an interesting facts and example? (y/n)");
+            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine("\nWould you like to see an interesting facts and example? (y/n)");
 
             while (true)
             {
@@ -93,8 +89,7 @@ namespace HW_5
                 Console.WriteLine($"We have complex roots: {realPart} + {imaginaryPart}i and {realPart} - {imaginaryPart}i");
             }
 
-            Console.WriteLine($"                                     ");
-            Console.WriteLine("You will also learn about most beautiful math equation -> The Euler's identity..");
+            Console.WriteLine("\nYou will also learn about most beautiful math equation -> The Euler's identity..");
             Console.WriteLine("But it is hard to print it here in readable form :)");
 
         }

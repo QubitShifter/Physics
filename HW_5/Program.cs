@@ -23,25 +23,28 @@ namespace HW_5
             {
                 case "1":
                     Physics PhysicsLab = new("Physics", "Natural Science", "Bachelor's", "Physics", 4, "Bachelor's");
-                    PhysicsLab.TheoreticalInformation();
+                    PhysicsLab.DisplayInfo();
                     PhysicsLab.DoPhysicsProblems();
                     break;
 
                 case "2":
                     Mathematics MathLab = new("Mathematics", "Formal Science", "sciences studying numbers, complex numbers, and shapes", "Pure Math", 4, "Bachelor's");
                     MathLab.TheoreticalInformation();
+                    MathLab.DisplayInfo();
                     MathLab.DoMathProblems();
                     break;
 
                 case "3":
                     Biology BiologyLab = new("Biology", "Natural Science", "Nature sciences studying living organisms", "Life Sciences", 4, "Bachelor's");
                     BiologyLab.TheoreticalInformation();
+                    BiologyLab.DisplayInfo();
                     BiologyLab.DoBiologyProblems();
                     break;
 
                 case "4":
                     Chemistry ChemistryLab = new("Chemistry", "Natural Science", "Nature sciences", "Physical Sciences", 4, "Bachelor's");
                     ChemistryLab.TheoreticalInformation();
+                    ChemistryLab.DisplayInfo();
                     ChemistryLab.DoChemistryProblems();
                     break;
 
@@ -50,7 +53,7 @@ namespace HW_5
                     break;
             }
 
-            Research research = new Research("This is PhD researh.", "CopyRight protected");
+            Research research = new Research($"This is {choice} PhD researh.", "CopyRight protected");
             research.DisplayResearch();
 
             Console.WriteLine("\nYou have reached singularity. Everythong is zeroed out.");

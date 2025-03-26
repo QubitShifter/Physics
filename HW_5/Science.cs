@@ -44,7 +44,7 @@
 
         private void ResearchMethodAccessDenied()
         {
-            Console.WriteLine( $"\nAccess to {Research} results is denied:" );
+            Console.WriteLine( $"\nAccess to {MainScienceBranch} results is denied:" );
         }
 
         public void ResearchMethodAccess()

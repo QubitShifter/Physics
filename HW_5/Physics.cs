@@ -22,9 +22,9 @@ namespace HW_5
         {
             Console.WriteLine($"\n{ScienceSubBranch} is a branch of {MainScienceBranch}.");
             Console.WriteLine($"{ScienceSubBranch} has different subjects like Classical Mechanics, Quantum Mechanics, Thermodynamics, Electrodynamics adn so on..");
-            Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semester} semesters.");
+            Console.WriteLine($"You can get {AcademicDegree} degree and it takes {Semester} semesters to complete.");
             Console.WriteLine($"You can get a Master's degree and it takes {Semester + 2} semesters to complete.");
-            Console.WriteLine($"Or even you can get a PhD if you suffer even more.");
+            Console.WriteLine($"Or you can even get a PhD degree if you are happy to suffer even more.");
 
             int numOfEquations = 10; 
             int coffeeCups = numOfEquations > 8 ? 5 : 2; 
@@ -33,12 +33,12 @@ namespace HW_5
 
             float difficulty = LevelOfDificulty(numOfEquations, coffeeCups, panicLevel, confidence);
 
-            Console.WriteLine($"\n----------------------- ");
-            Console.WriteLine($"   stresfull warning:) ");
-            Console.WriteLine($"   tons of equations -> more coffee (at least {coffeeCups} cups per hour)");
+            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"   stresfull warning............. ");
+            Console.WriteLine($"   tons of equations -> hance gallons of coffee");
             Console.WriteLine($"   panic level raises up {panicLevel}/10");
             Console.WriteLine($"   and of course your confidence drops to {confidence}/10");
-            
+            Console.WriteLine($"\n---------------------------------------------------------------------- ");
             Console.WriteLine("\nWould you like to see an interesting facts and example? (y/n)");
 
             while (true)
@@ -64,6 +64,7 @@ namespace HW_5
 
         public  void DoPhysicsProblems()
         {
+            Console.WriteLine($"\n----------------------- ");
             Console.WriteLine("\nSpeed of Light is denoted as constant 'C':");
 
             Console.WriteLine($"\n1. Speed of light is the universal constant measured to be {speedOfLight} meters per second.");
@@ -78,6 +79,7 @@ namespace HW_5
             Console.WriteLine($"\n3. It takes {timeFromSunToEarth:F2} seconds for light to reach the Earth from the sun.");
             double secondsToMinutes = timeFromSunToEarth / 60;
             Console.WriteLine($"Which is just about {secondsToMinutes:F2} minutes.");
+            Console.WriteLine($"\n----------------------- ");
         }
     }
 }

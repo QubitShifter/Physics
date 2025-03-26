@@ -15,12 +15,9 @@ namespace HW_5
             SubjectOf = subjectOf;
         }
 
-        
-
         public void TheoreticalInformation()
         {
-            Console.WriteLine( $"\n{NameOfScience} study information " );
-            LevelOfDificulty(12, 5, 9, 2 );
+            Console.WriteLine( $"\n{NameOfScience} study information... " );     
         }
     }
 }
