@@ -7,8 +7,8 @@ namespace HW_5
         public int Semester { get; set; }
         public string AcademicDegree { get; set; }
 
-        public Biology(string scienceSubBranch, string mainScienceBranch, string nameOfScience, string subjectOf, int semester, string academicDegree)
-            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf)
+        public Biology(string scienceSubBranch, string mainScienceBranch, string nameOfScience, string subjectOf, int semester, string academicDegree, string research)
+            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf, research)
         {
             Semester = semester;
             AcademicDegree = academicDegree;
@@ -22,6 +22,7 @@ namespace HW_5
             Console.WriteLine($"You can get a Master's degree and it takes {Semester + 2} semesters to complete.");
             Console.WriteLine($"Or even you can get a PhD if you suffer even more.");
 
+            Console.WriteLine("---------------------------------------------------------------");
             Console.WriteLine("\nWould you like to see an interesting facts and example? (y/n)");
 
             while (true)
@@ -45,14 +46,14 @@ namespace HW_5
             }
         }
 
-        public void DoBiologyProblems()
+        private void DoBiologyProblems()
         {
+            Console.WriteLine("--------------------------------------------------");
             Console.WriteLine("\nIn Biology we are dealing with living organisms.");
             Console.WriteLine("We try to understand our DNA, the human genome.");
             Console.WriteLine("\nDNA is our genetic material and carries all the instructions from generation to generation.");
-            Console.WriteLine($"DNA is made up of “letters”, represented as A, T, G and C. These letters are short for the chemical compounds they constitute.");
-            Console.WriteLine("There are 3 billion DNA letters contained in every cell!");
-            Console.WriteLine("Can you imagine!");
+            Console.WriteLine($"DNA is made up of “letters”, represented as A, T, G and C. \nThese letters are short for the chemical compounds they constitute.");
+            Console.WriteLine("There are 3 billion DNA letters contained in every cell!\nCan you imagine!");
         }
     }
 }

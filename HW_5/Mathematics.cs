@@ -1,15 +1,12 @@
-﻿using System;
-using System.Numerics;
-
-namespace HW_5
+﻿namespace HW_5
 {
     public class Mathematics : ScienceLab
     {
         public int Semester { get; set; }
         public string AcademicDegree { get; set; }
 
-        public Mathematics(string scienceSubBranch, string mainScienceBranch, string nameOfScience, string subjectOf, int semester, string academicDegree)
-            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf)
+        public Mathematics(string scienceSubBranch, string mainScienceBranch, string nameOfScience, string subjectOf, int semester, string academicDegree, string research)
+            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf, research)
         {
             Semester = semester;
             AcademicDegree = academicDegree;
@@ -30,12 +27,12 @@ namespace HW_5
 
             float difficulty = LevelOfDificulty(numOfEquations, coffeeCups, panicLevel, confidence);
 
-            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"\n------------------------------------------------------------------------");
             Console.WriteLine($"   stresfull warning............. ");
             Console.WriteLine($"   tons of equations -> hance gallons of coffee");
             Console.WriteLine($"   panic level raises up {panicLevel}/10");
             Console.WriteLine($"   and of course your confidence drops to {confidence}/10");
-            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"\n----------------------------------------------------------------------- ");
             Console.WriteLine("\nWould you like to see an interesting facts and example? (y/n)");
 
             while (true)
@@ -55,10 +52,10 @@ namespace HW_5
             }
         }
 
-        public void DoMathProblems()
+        private void DoMathProblems()
         {
-            Console.WriteLine($"                                     ");
-            Console.WriteLine("Let's calculate a quadratic equation..");
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine("\nLet's calculate a quadratic equation..");
             
             Console.Write("Enter coefficient a: ");
             double a = Convert.ToDouble(Console.ReadLine());
@@ -89,9 +86,8 @@ namespace HW_5
                 Console.WriteLine($"We have complex roots: {realPart} + {imaginaryPart}i and {realPart} - {imaginaryPart}i");
             }
 
-            Console.WriteLine("\nYou will also learn about most beautiful math equation -> The Euler's identity..");
-            Console.WriteLine("But it is hard to print it here in readable form :)");
-
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine("\nYou will also learn about most beautiful math equation -> The Euler's identity..\nBut it is hard to print it here in readable form");
         }
     }
 }

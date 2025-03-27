@@ -3,19 +3,18 @@
     public class Science
     {
         public string MainScienceBranch { get; set;  }
-        protected string ScienceSubBranch;
-
-        private string Research = "Field research Data";
+        public string ScienceSubBranch { get; set; }
+        protected string Research ;
         
-
-        public Science(string mainScienceBranch, string scienceSubBranch)
+        public Science(string mainScienceBranch, string scienceSubBranch, string research)
             
         {
             MainScienceBranch = mainScienceBranch;
             ScienceSubBranch = scienceSubBranch;
+            Research = research;
+           
         }
 
- 
         protected  float LevelOfDificulty(int numOfEquations, int coffeeCupsConsumed, int panicLevel, int confidence)
         {
             if (numOfEquations == 0) 
@@ -41,10 +40,10 @@
             return normalizedDifficulty; 
         }
 
-
         private void ResearchMethodAccessDenied()
         {
-            Console.WriteLine( $"\nAccess to {MainScienceBranch} results is denied:" );
+            Console.WriteLine($"\nAccess to {ScienceSubBranch} results is denied:");
+            Console.WriteLine($"-------------------------------------------------");
         }
 
         public void ResearchMethodAccess()

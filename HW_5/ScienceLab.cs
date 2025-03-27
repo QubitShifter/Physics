@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace HW_5
+﻿namespace HW_5
 {
     public class ScienceLab: Science
     {
         public string NameOfScience { get; set; }
         public string? SubjectOf { get; set; }
 
-        public ScienceLab(string mainScienceBranch, string scienceSubBranch, string nameOfScience, string subjectOf)
-            : base(mainScienceBranch, scienceSubBranch)
+        public ScienceLab( string nameOfScience, string subjectOf)
+            : base("", "", "")
+        {
+            NameOfScience = nameOfScience;
+            SubjectOf = subjectOf;
+        }
+
+        public ScienceLab(string mainScienceBranch, string scienceSubBranch, string nameOfScience, string subjectOf, string research)
+            : base(mainScienceBranch, scienceSubBranch, research)
         {
             NameOfScience = nameOfScience;
             SubjectOf = subjectOf;

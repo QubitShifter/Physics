@@ -49,11 +49,11 @@
       <FileName>Research.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HW_5.Program" Collapsed="true">
+  <Class Name="HW_5.StartScienceLab" Collapsed="true">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>Program.cs</FileName>
+      <FileName>StartScienceLab.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

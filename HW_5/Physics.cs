@@ -10,8 +10,8 @@ namespace HW_5
         public int Semester { get; set; }
         public string AcademicDegree { get; set; }
 
-        public Physics(string scienceSubBranch, string mainScienceBranch,  string nameOfScience, string subjectOf, int semester, string academicDegree)
-            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf)
+        public Physics(string scienceSubBranch, string mainScienceBranch,  string nameOfScience, string subjectOf, int semester, string academicDegree, string research)
+            : base(mainScienceBranch, scienceSubBranch, nameOfScience, subjectOf, research)
 
         {
             Semester = semester;
@@ -33,12 +33,12 @@ namespace HW_5
 
             float difficulty = LevelOfDificulty(numOfEquations, coffeeCups, panicLevel, confidence);
 
-            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"\n------------------------------------------------------------------------------------------------");
             Console.WriteLine($"   stresfull warning............. ");
             Console.WriteLine($"   tons of equations -> hance gallons of coffee");
             Console.WriteLine($"   panic level raises up {panicLevel}/10");
             Console.WriteLine($"   and of course your confidence drops to {confidence}/10");
-            Console.WriteLine($"\n---------------------------------------------------------------------- ");
+            Console.WriteLine($"\n------------------------------------------------------------------------------------------------");
             Console.WriteLine("\nWould you like to see an interesting facts and example? (y/n)");
 
             while (true)
@@ -62,9 +62,9 @@ namespace HW_5
             }
         }
 
-        public  void DoPhysicsProblems()
+        private  void DoPhysicsProblems()
         {
-            Console.WriteLine($"\n----------------------- ");
+            Console.WriteLine($"\n--------------------------------------------------------------------------------------------------");
             Console.WriteLine("\nSpeed of Light is denoted as constant 'C':");
 
             Console.WriteLine($"\n1. Speed of light is the universal constant measured to be {speedOfLight} meters per second.");
@@ -79,7 +79,7 @@ namespace HW_5
             Console.WriteLine($"\n3. It takes {timeFromSunToEarth:F2} seconds for light to reach the Earth from the sun.");
             double secondsToMinutes = timeFromSunToEarth / 60;
             Console.WriteLine($"Which is just about {secondsToMinutes:F2} minutes.");
-            Console.WriteLine($"\n----------------------- ");
+            Console.WriteLine($"\n---------------------------------------------------------------------------------------------------");
         }
     }
 }
