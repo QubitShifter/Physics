@@ -1,6 +1,8 @@
-﻿using System;
-using WeatherStation.Infrastructure.DataAccess;
-using WeatherStation.Core.Interfaces;
+﻿using WeatherStationApp.Core.Abstract;
+using WeatherStationApp.Infrastructure.Sensors;
+using WeatherStationApp.Core.Interfaces;
+using WeatherStationApp.Infrastructure.Repositories;
+using System.Collections.Generic;
 
 namespace WeatherStationApp
 {
@@ -13,7 +15,7 @@ namespace WeatherStationApp
 
             foreach (var measurement in measurements)
             {
-                Console.WriteLine($"Weather Station Data:");
+                Console.WriteLine("Weather Station Data:");
                 Console.WriteLine($"Ambient Temp:      {measurement.AmbientTemperature} °C");
                 Console.WriteLine($"Ground Temp:       {measurement.GroundTemperature} °C");
                 Console.WriteLine($"Air Quality PM2.5: {measurement.AirQualityPm25} µg/m³");
@@ -26,6 +28,20 @@ namespace WeatherStationApp
                 Console.WriteLine($"Wind Gust:         {measurement.WindGustSpeed} km/h");
                 Console.WriteLine($"Rainfall:          {measurement.Rainfall} mm");
                 Console.WriteLine("--------------------------------------------------");
+            }
+
+            //inheritance chain
+            List<SensorBase> sensors = new List<SensorBase>
+            {
+                new Bme280Reader(),
+                new WindSpeedSensor(),
+                new TemperatureSensor()
+            };
+
+            foreach (var sensor in sensors)
+            {
+                sensor.Calibrate();
+                Console.WriteLine($"{sensor.Type} reading: {sensor.ReadValue()}");
             }
         }
     }

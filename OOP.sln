@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_5", "HW_5\HW_5.csproj", "{7EC18519-613E-489D-8D89-74D1E6882FA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStation", "WeatherStation\WeatherStation.csproj", "{B8C407ED-F648-49A9-9303-9CB849B96E77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherStationApp", "WeatherStation\WeatherStationApp.csproj", "{B8C407ED-F648-49A9-9303-9CB849B96E77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

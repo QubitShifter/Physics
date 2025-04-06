@@ -1,10 +1,17 @@
 ﻿using System;
 
-public class Bme280Reader : AdvancedSensor, IDataLogger, ICalculation
+using WeatherStationApp.Core.Abstract;
+
+namespace WeatherStationApp.Infrastructure.Sensors
 {
-    public override double ReadValue() => 22.5; // temp as example
-    public override string Unit => "°C";
-    public override void Reset() => Console.WriteLine("BME280 Reset");
-    public void LogData(double data) => Console.WriteLine($"Temp: {data}");
-    public double Calculate() => ReadValue();
+    public class Bme280Reader : SensorBase
+    {
+        public override string Type => "BME280";
+
+        public override double ReadValue()
+        {
+            return 23.5; // Mocked ambient temp
+        }
+    }
 }
+

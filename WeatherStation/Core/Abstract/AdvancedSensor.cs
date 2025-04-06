@@ -1,14 +1,16 @@
-﻿using System;
+﻿using WeatherStationApp.Core.Interfaces;
 
-public abstract class AdvancedSensor : BaseSensor
+namespace WeatherStationApp.Core.Abstract
 {
-    public override string SensorType => "Advanced Sensor";
-
-    public void Calibrate()
+    public abstract class AdvancedSensor : SensorBase
     {
-        Console.WriteLine("Calibrating...");
+        public abstract double Sensitivity { get; set; }
+
+        public override void Calibrate()
+        {
+            Console.WriteLine($"[AdvancedSensor] Calibrating {Type} with sensitivity {Sensitivity}");
+        }
+
+        public string CalibrationStatus => "Auto-Calibrated";
     }
-
-    public abstract void Reset();
 }
-

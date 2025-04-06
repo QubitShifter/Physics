@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using WeatherStation.Core.Entities;
+using WeatherStationApp.Core.Entities;
 
 namespace WeatherStationApp.Core.Interfaces
 {
@@ -9,4 +9,5 @@ namespace WeatherStationApp.Core.Interfaces
         IEnumerable<WeatherMeasurement> GetAllMeasurements();
     }
 }
+
 

@@ -1,10 +1,15 @@
 ﻿using System;
+using WeatherStationApp.Core.Abstract;
 
-public class WindDirectionSensor : AdvancedSensor, IDataLogger, ICalculation
+namespace WeatherStationApp.Infrastructure.Sensors
 {
-    public override double ReadValue() => 90;
-    public override string Unit => "degrees";
-    public override void Reset() => Console.WriteLine("WindDirectionSensor reset");
-    public void LogData(double data) => Console.WriteLine($"Direction: {data}");
-    public double Calculate() => ReadValue();
+    public class WindDirectionSensor : SensorBase
+    {
+        public override string Type => "Wind Direction";
+
+        public override double ReadValue()
+        {
+            return 135.0;
+        }
+    }
 }

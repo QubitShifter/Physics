@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WeatherStation.Core.Entities
+namespace WeatherStationApp.Core.Entities
 {
     public class WeatherMeasurement
     {
@@ -8,7 +8,7 @@ namespace WeatherStation.Core.Entities
         public double GroundTemperature { get; set; }
         public double AirQualityPm25 { get; set; }
         public double AirQualityPm10 { get; set; }
-        public double AirQualityIndex { get; set; }
+        public int AirQualityIndex { get; set; }
         public double AirPressure { get; set; }
         public double Humidity { get; set; }
         public double WindDirection { get; set; }
@@ -17,3 +17,4 @@ namespace WeatherStation.Core.Entities
         public double Rainfall { get; set; }
     }
 }
+
