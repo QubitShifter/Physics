@@ -1,13 +1,10 @@
 ﻿using System;
 
-public class WindDirectionSensor
+public class WindDirectionSensor : AdvancedSensor, IDataLogger, ICalculation
 {
-    // Mocked read method for now. Replace with real MCP3008 SPI read.
-    public double ReadVoltage()
-    {
-        // Simulate analog read (0.0 - 3.3V)
-        Random rand = new Random();
-        return Math.Round(rand.NextDouble() * 3.3, 1);
-    }
+    public override double ReadValue() => 90;
+    public override string Unit => "degrees";
+    public override void Reset() => Console.WriteLine("WindDirectionSensor reset");
+    public void LogData(double data) => Console.WriteLine($"Direction: {data}");
+    public double Calculate() => ReadValue();
 }
-
