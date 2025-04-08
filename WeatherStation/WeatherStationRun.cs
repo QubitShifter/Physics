@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace WeatherStationApp
 {
-    class Program
+    class WeatherStationRun
     {
         static void Main(string[] args)
         {
@@ -30,7 +30,6 @@ namespace WeatherStationApp
                 Console.WriteLine("--------------------------------------------------");
             }
 
-            //inheritance chain
             List<SensorBase> sensors = new List<SensorBase>
             {
                 new Bme280Reader(),
