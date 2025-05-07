@@ -3,6 +3,8 @@ using WeatherStationApp.Infrastructure.Sensors;
 using WeatherStationApp.Core.Interfaces;
 using WeatherStationApp.Infrastructure.Repositories;
 using System.Collections.Generic;
+using WeatherStationApp.Infrastructure.Observers;
+using WeatherStationApp.Infrastructure.Services;
 
 namespace WeatherStationApp
 {
@@ -41,6 +43,28 @@ namespace WeatherStationApp
             {
                 sensor.Calibrate();
                 Console.WriteLine($"{sensor.Type} reading: {sensor.ReadValue()}");
+            }
+
+            var weatherStation = new WeatherStation();
+            var consoleDisplay = new ConsoleDisplay();
+            var emailNotifier = new EmailNotifier("user@example.com");
+
+            weatherStation.WeatherChanged += consoleDisplay.OnWeatherChanged;
+            emailNotifier.Subscribe(weatherStation);
+
+            weatherStation.SimulateWeatherChange();
+
+            var station = new WeatherStation();
+            var display = new ConsoleDisplay();
+
+            // Subscribe to the event
+            station.WeatherUpdated += display.OnWeatherUpdated;
+
+            var repo = new MockWeatherRepository();
+
+            foreach (var measurement in repo.GetAllMeasurements())
+            {
+                station.SetMeasurement(measurement);
             }
         }
     }
